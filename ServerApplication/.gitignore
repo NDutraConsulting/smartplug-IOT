@@ -1,0 +1,7 @@
+*.db
+.pyc
+__pycache__
+ubuntu-xenial-16.04-cloudimg-console.log
+*.swp
+.vagrant
+SmartPlug.egg-info

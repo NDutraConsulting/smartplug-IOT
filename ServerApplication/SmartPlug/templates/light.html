@@ -1,0 +1,22 @@
+{% extends "sensor_page.html" %}
+	
+	{% block discription %}
+		<h1>Light Sensor</h1>
+		<p><strong><big>The light sensor is uses a photo resistor attached to a analog to digital converter. The brighness is reported using units [0-1023].</big></strong></p>
+	{% endblock %}
+	
+	{% block table_headers %}
+		<tr>
+			<th>Time</th>
+			<th>Level</th>
+		</tr>
+	{% endblock %}
+	
+	{% block table_rows %}
+		{% for entry in entries %}
+			<tr>
+				<td>{{ entry.time }}</td>
+				<td>{{ entry.level }}</td>
+			</tr>
+		{% endfor %}
+	{% endblock %}

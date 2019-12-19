@@ -1,0 +1,26 @@
+{% extends "sensor_page.html" %}
+	
+	{% block discription %}
+		<h1>Sound Sensor</h1>
+		<p><strong><big>The sound sensor is responsible reports three values, gate envelope and Audio. I do not mnow much about the units of these readings nor what they mean</big></strong></p>
+	{% endblock %}
+	
+	{% block table_headers %}
+		<tr>
+			<th>Time</th>
+			<th>Gate</th>
+			<th>Envelope</th>
+			<th>Audio</th>
+		</tr>
+	{% endblock %}
+	
+	{% block table_rows %}
+		{% for entry in entries %}
+			<tr>
+				<td>{{ entry.time }}</td>
+				<td>{{ entry.gate }}</td>
+				<td>{{ entry.envelope }}</td>
+				<td>{{ entry.audio }}</td>
+			</tr>
+		{% endfor %}
+	{% endblock %}

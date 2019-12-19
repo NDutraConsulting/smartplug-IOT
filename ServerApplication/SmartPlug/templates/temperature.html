@@ -1,0 +1,24 @@
+{% extends "sensor_page.html" %}
+	
+	{% block discription %}
+		<h1>Temperature Sensor</h1>
+		<p><strong><big>The temperature sensor is responsible for collecting temerature and humidity data.  Temperature is reported in Celsius and humidity is reported in g/m^3.</big></strong></p>
+	{% endblock %}
+	
+	{% block table_headers %}
+		<tr>
+			<th>Time</th>
+			<th>Temperature</th>
+			<th>Humidity</th>
+		</tr>
+	{% endblock %}
+	
+	{% block table_rows %}
+		{% for entry in entries %}
+			<tr>
+				<td>{{ entry.time }}</td>
+				<td>{{ entry.temperature }}</td>
+				<td>{{ entry.humidity }}</td>
+			</tr>
+		{% endfor %}
+	{% endblock %}

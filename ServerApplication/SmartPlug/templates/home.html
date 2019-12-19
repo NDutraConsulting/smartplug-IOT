@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+    {% block body %}
+        <div>
+	    <select id="date_device_key">
+		<option value="none"> Select a Date </option>
+		{% for item in options %}
+                 <option value="{{item.date_device_key}}" >{{item.date_device_key}}</option>
+                {% endfor %}
+	    </select>
+
+            <p><strong><big>Select a sensor below to view its data. The data was collected every minute for an hour. The data is sorted from time 0:0:00 to time 0:59:00 (hr:min:sec).</big></strong></p>
+            <div style="text-align:center;" >
+                <button type="button" onclick='getTempData()'> <strong>Temperature Sensor</strong></button>
+            </div>
+            <div style="text-align:center;" >
+                <button type="button" onclick='getLightData()'> <strong>Light Sensor</strong></button>
+            </div>
+            <div style="text-align:center;" >
+                <button type="button" onclick='getSoundData()'> <strong>Sound Sensor</strong></button>
+            </div>
+        </div>
+
+    {% endblock %}

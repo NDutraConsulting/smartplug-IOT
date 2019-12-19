@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+    {% block body %}
+        <div >
+                {% block discription %}
+                {% endblock %}
+				<table>
+					<thead>
+		                {% block table_headers %}
+		                {% endblock %}
+		            </thead>
+		            <tbody>
+						{% for entry in entries %}
+				                {% block table_rows %}
+				                {% endblock %}
+						{% endfor %}
+					</tbody>
+				</table>
+        </div>
+
+    {% endblock %}
